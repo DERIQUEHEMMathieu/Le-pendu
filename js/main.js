@@ -1,13 +1,11 @@
 // Creation words list
 const wordsList = ['dragon', 'flemme', 'bleu', 'coder', 'manger', 'jouer', 'dormir', 'monstre', 'console', 'boire', 'baleine', 'chat', 'dauphin',
-'huile', 'angle', 'armoire', 'banc', 'bureau', 'cabinet', 'carreau', 'chaise', 'classe', 'coin', 'couloir', 'dossier',
-'ecole', 'entrer', 'escalier', 'etagere', 'exterieur', 'fenetre', 'interieur', 'lavabo', 'marche', 'matelas', 'maternelle',
-'meuble', 'mousse', 'peluche', 'placard', 'plafond', 'porte', 'poubelle', 'radiateur', 'rampe', 'rideau', 'robinet'];
+'huile', 'angle', 'armoire', 'banc', 'bureau', 'cabinet', 'carreau', 'chaise', 'classe', 'coin', 'couloir', 'dossier'];
 
 // Functions Definition
 // Choice a word
 function computerChoose() {
-    let index = Math.floor(Math.random() * Math.floor(46));
+    let index = Math.floor(Math.random() * Math.floor(24));
     let computerChoice = wordsList[index];
     return computerChoice;
 }
@@ -35,6 +33,29 @@ function checkLetter (letter) {
     return letter;
 }
 
+// Game menu
+function gameMenu() {
+    let menu = prompt("Choisissez : \nj : jouer \nr : voir les règles \nq : quitter");
+   
+    alert("Bonjour,\nPassez du bon temps avec ce jeu du pendu entièrement réalisé en JavaScript.");
+    while (menu) {
+        if (menu === 'j') {
+            main();
+        }
+        else if (menu === 'r') {
+            alert("Voici les règles : \nUn mot choisi au hasard vous sera proposé sous forme de '_'. \nVous aurez 7 tentatives pour le découvrir en tapant une lettre à chaque essai. \nSi vous trouvez le mot, c'est gagné ! Sinon, la partie sera perdue.");
+            gameMenu();
+        }
+        else if (menu === 'q') {
+            alert("A bientôt entre deux fonctions JavaScript ! ");
+            window.close();
+        }
+        else {
+            menu = prompt("Choisissez : \nj : jouer \nr : voir les règles \nq : quitter");
+        }
+    }
+}
+
 // Game surveillance
 function gameSurveillance(wordUnderscore) {
     let number = 0;
@@ -47,8 +68,7 @@ function gameSurveillance(wordUnderscore) {
 }
 
 // Game code
-function main () {
-    alert("Bonjour,\nPassez du bon temps avec ce jeu du pendu entièrement réalisé en JavaScript");
+function main() {
     let userChoice;
     let pointsSet = 7;
     let life = 0;
@@ -77,9 +97,13 @@ function main () {
     }
         if(pointsSet === 0) {
         alert(`Vous avez perdu. \nLe mot était : ${computerChoice}`);
+        gameMenu();
         } 
         else if (!gameInProgress) {
         alert("Bravo, vous avez gagné !");
+        gameMenu();
         }
 }
+
+gameMenu();
 main();
