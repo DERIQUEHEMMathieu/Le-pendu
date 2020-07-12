@@ -30,14 +30,20 @@ function checkLetter (letter) {
     while(letter.length > 1) {
         letter = prompt("Doucement sur le clavier !" + " " + String.fromCodePoint(0x1F609) + " " + "Une seule lettre à la fois.");
     }
+    while(letter.length === 0) {
+        letter = prompt("Veuillez entrer une lettre pour jouer.");
+    }
     return letter;
+}
+
+// Display welcome message
+function welcome() {
+    alert("Bonjour,\nPassez du bon temps avec ce jeu du pendu entièrement réalisé en JavaScript.");
 }
 
 // Game menu
 function gameMenu() {
     let menu = prompt("Choisissez : \nj : jouer \nr : voir les règles \nq : quitter");
-   
-    alert("Bonjour,\nPassez du bon temps avec ce jeu du pendu entièrement réalisé en JavaScript.");
     while (menu) {
         if (menu === 'j') {
             main();
@@ -68,6 +74,8 @@ function gameSurveillance(wordUnderscore) {
 }
 
 // Game code
+welcome();
+
 function main() {
     let userChoice;
     let pointsSet = 7;
