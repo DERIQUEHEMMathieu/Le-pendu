@@ -1,14 +1,14 @@
 # Le jeu du Pendu en JavaScript
 
-Ce jeu permet de consolider les bases acquises lors de la semaine 2 de formation JavaScript.  C’est également l’occasion de découvrir des pratiques de programmation plus avancées et de ce familiarisez avec les normes JavaScript ES6, qu’on appelle également le JavaScript moderne. 
+Ce jeu permet de consolider les bases acquises lors de la semaine 2 de formation JavaScript.  C’est également l’occasion de découvrir des pratiques de programmation plus avancées et de ce familiariser avec les normes JavaScript ES6, qu’on appelle également le JavaScript moderne. 
 
 ***Compétences acquises :***
 
  - Usage des boucles for of et for in
  - Usage de foreach
  - Usage des nouvelles notations (let, const, template...)
- - Déclarer des classes et utiliser un constructeur d’objet
-
+ - Déclarer des classes
+ 
 ## Projet
 
 Votre direction s’est dit qu’elle allait vous confier un projet. Elle souhaiterait commercialiser un jeu du pendu en navigateur. Elle vous a donc de produire un MVP (minimum viable product) de l’application. Pour l’instant du JavaScript suffira, il n’y a pas encore besoin d’interface graphique.
