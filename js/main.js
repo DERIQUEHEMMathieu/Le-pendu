@@ -5,7 +5,7 @@ const wordsList = ['dragon', 'flemme', 'bleu', 'coder', 'manger', 'jouer', 'dorm
 // Functions Definition
 // Choice a word
 function computerChoose() {
-    let index = Math.floor(Math.random() * Math.floor(24));
+    let index = Math.floor(Math.random() * wordsList.length);
     let computerChoice = wordsList[index];
     return computerChoice;
 }
@@ -43,7 +43,7 @@ function welcome() {
 
 // Game menu
 function gameMenu() {
-    let menu = prompt("Choisissez : \nj : jouer \nr : voir les règles \nq : quitter");
+    let menu = " ";
     while (menu) {
         if (menu === 'j') {
             main();
@@ -54,7 +54,7 @@ function gameMenu() {
         }
         else if (menu === 'q') {
             alert("A bientôt entre deux fonctions JavaScript ! ");
-            window.close();
+            break;
         }
         else {
             menu = prompt("Choisissez : \nj : jouer \nr : voir les règles \nq : quitter");
@@ -114,4 +114,3 @@ function main() {
 }
 
 gameMenu();
-main();
